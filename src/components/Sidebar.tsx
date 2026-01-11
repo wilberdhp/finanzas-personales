@@ -1,5 +1,4 @@
 import { DollarSign, TrendingUp, CreditCard, X, Wallet, TrendingDown, Settings } from 'lucide-react';
-import { useState } from 'react';
 import useApp, { TypeCurrentPage } from '../hooks/useApp';
 
 const sidebarItems = [
@@ -14,8 +13,7 @@ const sidebarItems = [
 
 function Sidebar() {
   
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
-  const { currentPage, setCurrentPage } = useApp()
+  const { currentPage, setCurrentPage, sidebarOpen, setSidebarOpen } = useApp()
   
   return (
     <div className={`${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 text-white transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0`}>
