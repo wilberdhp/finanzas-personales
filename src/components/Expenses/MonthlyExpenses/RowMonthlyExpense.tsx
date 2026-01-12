@@ -1,5 +1,6 @@
 import { CheckCircle, Edit, Trash2, XCircle } from "lucide-react";
 import { TypeMonthlyExpense } from "./MonthlyExpenses";
+import useApp from "../../../hooks/useApp";
 
 
 
@@ -13,7 +14,12 @@ function RowMonthlyExpense({ expense }: RowMonthlyExpenseProps) {
     // 1. expense.id. Función para cambiar estado de cuenta.
   }
 
-  const openEditMonthlyExpenseModal = () => {}
+  const { setEditingMonthlyExpense, setOpenMonthlyExpenseModal } = useApp()
+
+  const openEditMonthlyExpenseModal = () => {
+    setEditingMonthlyExpense(expense)
+    setOpenMonthlyExpenseModal(true)
+  }
 
   const openDeleteConfirmation = () => {}
   
