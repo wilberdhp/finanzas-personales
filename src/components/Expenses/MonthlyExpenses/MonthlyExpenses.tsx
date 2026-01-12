@@ -5,6 +5,7 @@ export type TypeMonthlyExpense = {
   description: string
   amount: string
   paymentDay: string
+  accountId: number
   account: string
   accountColor: string
   paymentStatus: "paid" | "upcoming" | "pending"
