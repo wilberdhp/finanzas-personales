@@ -31,7 +31,8 @@ function TableMonthlyExpenses() {
       </thead>
       <tbody className="bg-white divide-y divide-gray-200">
         {monthlyExpenses.map((expense) => (
-          <RowMonthlyExpense 
+          <RowMonthlyExpense
+            key={expense.id}
             expense={expense}
           />
         ))}
