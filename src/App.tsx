@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import AccountsPage from "./components/Accounts/AccountsPage";
 import Dashboard from "./components/Dashboard/Dashboard";
@@ -38,6 +39,18 @@ function App() {
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}
+
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
